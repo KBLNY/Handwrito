@@ -1,0 +1,710 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A20BDCF1D144A2200799A87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A20BDCD1D144A2200799A87 /* Main.storyboard */; };
+		0A20BDD41D144A2200799A87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A20BDD21D144A2200799A87 /* LaunchScreen.storyboard */; };
+		0A20BDDF1D144A2200799A87 /* handwritoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A20BDDE1D144A2200799A87 /* handwritoTests.swift */; };
+		0A20BDEA1D144A2200799A87 /* handwritoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A20BDE91D144A2200799A87 /* handwritoUITests.swift */; };
+		0A20BE011D144E5800799A87 /* HWHandwriteTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A20BE001D144E5800799A87 /* HWHandwriteTextViewController.swift */; };
+		0A20BE041D144E8900799A87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A20BE021D144E8900799A87 /* Assets.xcassets */; };
+		0A20BE061D144EA600799A87 /* localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A20BE051D144EA600799A87 /* localizable.strings */; };
+		0A20BE091D144ED900799A87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A20BE081D144ED900799A87 /* AppDelegate.swift */; };
+		0A20BE0B1D144F0600799A87 /* HWConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A20BE0A1D144F0600799A87 /* HWConstants.swift */; };
+		0A20BE0D1D1456F500799A87 /* HWHandwriteTextAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A20BE0C1D1456F500799A87 /* HWHandwriteTextAPIManager.swift */; };
+		0A20BE0F1D145D0D00799A87 /* HWRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A20BE0E1D145D0D00799A87 /* HWRender.swift */; };
+		0A8E3E3D1D15A9E5001F41BF /* HWValidatableUITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E3E3C1D15A9E5001F41BF /* HWValidatableUITextView.swift */; };
+		303B7C87477856976435266B /* Pods_handwrito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6249E9564BB313703D5C5FDF /* Pods_handwrito.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0A20BDDB1D144A2200799A87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A20BDBE1D144A2200799A87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A20BDC51D144A2200799A87;
+			remoteInfo = handwrito;
+		};
+		0A20BDE61D144A2200799A87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A20BDBE1D144A2200799A87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A20BDC51D144A2200799A87;
+			remoteInfo = handwrito;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A20BDC61D144A2200799A87 /* handwrito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = handwrito.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A20BDCE1D144A2200799A87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0A20BDD31D144A2200799A87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0A20BDD51D144A2200799A87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A20BDDA1D144A2200799A87 /* handwritoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = handwritoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A20BDDE1D144A2200799A87 /* handwritoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = handwritoTests.swift; sourceTree = "<group>"; };
+		0A20BDE01D144A2200799A87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A20BDE51D144A2200799A87 /* handwritoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = handwritoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A20BDE91D144A2200799A87 /* handwritoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = handwritoUITests.swift; sourceTree = "<group>"; };
+		0A20BDEB1D144A2200799A87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A20BE001D144E5800799A87 /* HWHandwriteTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWHandwriteTextViewController.swift; sourceTree = "<group>"; };
+		0A20BE021D144E8900799A87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A20BE051D144EA600799A87 /* localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = localizable.strings; sourceTree = "<group>"; };
+		0A20BE081D144ED900799A87 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0A20BE0A1D144F0600799A87 /* HWConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWConstants.swift; sourceTree = "<group>"; };
+		0A20BE0C1D1456F500799A87 /* HWHandwriteTextAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWHandwriteTextAPIManager.swift; sourceTree = "<group>"; };
+		0A20BE0E1D145D0D00799A87 /* HWRender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWRender.swift; sourceTree = "<group>"; };
+		0A8E3E3C1D15A9E5001F41BF /* HWValidatableUITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HWValidatableUITextView.swift; path = handwrito/Utils/HWValidatableUITextView.swift; sourceTree = SOURCE_ROOT; };
+		5E6205D6192EDB966C8F9018 /* Pods-handwrito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handwrito.release.xcconfig"; path = "Pods/Target Support Files/Pods-handwrito/Pods-handwrito.release.xcconfig"; sourceTree = "<group>"; };
+		6249E9564BB313703D5C5FDF /* Pods_handwrito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_handwrito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB86DDB8D3D0029B7B38A2B9 /* Pods-handwrito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handwrito.debug.xcconfig"; path = "Pods/Target Support Files/Pods-handwrito/Pods-handwrito.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A20BDC31D144A2200799A87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				303B7C87477856976435266B /* Pods_handwrito.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A20BDD71D144A2200799A87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A20BDE21D144A2200799A87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A20BDBD1D144A2200799A87 = {
+			isa = PBXGroup;
+			children = (
+				0A20BDC81D144A2200799A87 /* handwrito */,
+				0A20BDDD1D144A2200799A87 /* handwritoTests */,
+				0A20BDE81D144A2200799A87 /* handwritoUITests */,
+				0A20BDC71D144A2200799A87 /* Products */,
+				B62679935671B7286D64B2FF /* Pods */,
+				102BA424A05D929CCD37D08F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0A20BDC71D144A2200799A87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A20BDC61D144A2200799A87 /* handwrito.app */,
+				0A20BDDA1D144A2200799A87 /* handwritoTests.xctest */,
+				0A20BDE51D144A2200799A87 /* handwritoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A20BDC81D144A2200799A87 /* handwrito */ = {
+			isa = PBXGroup;
+			children = (
+				0A20BE071D144ED900799A87 /* Application */,
+				0A20BDF91D144DD300799A87 /* API */,
+				0A20BDFA1D144DD300799A87 /* Common */,
+				0A20BDFB1D144DD300799A87 /* Controllers */,
+				0A20BDFC1D144DD300799A87 /* Utils */,
+				0A20BDFD1D144DD300799A87 /* Models */,
+				0A20BDFE1D144DD300799A87 /* Resources */,
+				0A20BDFF1D144DD300799A87 /* Views */,
+				0A20BDD51D144A2200799A87 /* Info.plist */,
+			);
+			path = handwrito;
+			sourceTree = "<group>";
+		};
+		0A20BDDD1D144A2200799A87 /* handwritoTests */ = {
+			isa = PBXGroup;
+			children = (
+				0A20BDDE1D144A2200799A87 /* handwritoTests.swift */,
+				0A20BDE01D144A2200799A87 /* Info.plist */,
+			);
+			path = handwritoTests;
+			sourceTree = "<group>";
+		};
+		0A20BDE81D144A2200799A87 /* handwritoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0A20BDE91D144A2200799A87 /* handwritoUITests.swift */,
+				0A20BDEB1D144A2200799A87 /* Info.plist */,
+			);
+			path = handwritoUITests;
+			sourceTree = "<group>";
+		};
+		0A20BDF91D144DD300799A87 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0A20BE0C1D1456F500799A87 /* HWHandwriteTextAPIManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		0A20BDFA1D144DD300799A87 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0A20BDFB1D144DD300799A87 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A20BE001D144E5800799A87 /* HWHandwriteTextViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0A20BDFC1D144DD300799A87 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0A8E3E3C1D15A9E5001F41BF /* HWValidatableUITextView.swift */,
+			);
+			name = Utils;
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0A20BDFD1D144DD300799A87 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A20BE0E1D145D0D00799A87 /* HWRender.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0A20BDFE1D144DD300799A87 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0A20BE021D144E8900799A87 /* Assets.xcassets */,
+				0A20BE031D144E8900799A87 /* Languages */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0A20BDFF1D144DD300799A87 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A20BDCD1D144A2200799A87 /* Main.storyboard */,
+				0A20BDD21D144A2200799A87 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A20BE031D144E8900799A87 /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				0A20BE051D144EA600799A87 /* localizable.strings */,
+			);
+			path = Languages;
+			sourceTree = "<group>";
+		};
+		0A20BE071D144ED900799A87 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0A20BE081D144ED900799A87 /* AppDelegate.swift */,
+				0A20BE0A1D144F0600799A87 /* HWConstants.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		102BA424A05D929CCD37D08F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6249E9564BB313703D5C5FDF /* Pods_handwrito.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B62679935671B7286D64B2FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB86DDB8D3D0029B7B38A2B9 /* Pods-handwrito.debug.xcconfig */,
+				5E6205D6192EDB966C8F9018 /* Pods-handwrito.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A20BDC51D144A2200799A87 /* handwrito */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A20BDEE1D144A2200799A87 /* Build configuration list for PBXNativeTarget "handwrito" */;
+			buildPhases = (
+				2415DA5E0D48FAE7E8EB0BFA /* Check Pods Manifest.lock */,
+				0A20BDC21D144A2200799A87 /* Sources */,
+				0A20BDC31D144A2200799A87 /* Frameworks */,
+				0A20BDC41D144A2200799A87 /* Resources */,
+				0A20BDF71D144B6200799A87 /* ShellScript */,
+				0A20BDF81D144B8400799A87 /* ShellScript */,
+				68170220C3E6AA2AB575D7C1 /* Embed Pods Frameworks */,
+				C69C0E6C0F33B278F26EDA96 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = handwrito;
+			productName = handwrito;
+			productReference = 0A20BDC61D144A2200799A87 /* handwrito.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0A20BDD91D144A2200799A87 /* handwritoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A20BDF11D144A2200799A87 /* Build configuration list for PBXNativeTarget "handwritoTests" */;
+			buildPhases = (
+				0A20BDD61D144A2200799A87 /* Sources */,
+				0A20BDD71D144A2200799A87 /* Frameworks */,
+				0A20BDD81D144A2200799A87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A20BDDC1D144A2200799A87 /* PBXTargetDependency */,
+			);
+			name = handwritoTests;
+			productName = handwritoTests;
+			productReference = 0A20BDDA1D144A2200799A87 /* handwritoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0A20BDE41D144A2200799A87 /* handwritoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A20BDF41D144A2200799A87 /* Build configuration list for PBXNativeTarget "handwritoUITests" */;
+			buildPhases = (
+				0A20BDE11D144A2200799A87 /* Sources */,
+				0A20BDE21D144A2200799A87 /* Frameworks */,
+				0A20BDE31D144A2200799A87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A20BDE71D144A2200799A87 /* PBXTargetDependency */,
+			);
+			name = handwritoUITests;
+			productName = handwritoUITests;
+			productReference = 0A20BDE51D144A2200799A87 /* handwritoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A20BDBE1D144A2200799A87 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = KBLNY;
+				TargetAttributes = {
+					0A20BDC51D144A2200799A87 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					0A20BDD91D144A2200799A87 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 0A20BDC51D144A2200799A87;
+					};
+					0A20BDE41D144A2200799A87 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 0A20BDC51D144A2200799A87;
+					};
+				};
+			};
+			buildConfigurationList = 0A20BDC11D144A2200799A87 /* Build configuration list for PBXProject "handwrito" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0A20BDBD1D144A2200799A87;
+			productRefGroup = 0A20BDC71D144A2200799A87 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A20BDC51D144A2200799A87 /* handwrito */,
+				0A20BDD91D144A2200799A87 /* handwritoTests */,
+				0A20BDE41D144A2200799A87 /* handwritoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A20BDC41D144A2200799A87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A20BDD41D144A2200799A87 /* LaunchScreen.storyboard in Resources */,
+				0A20BE061D144EA600799A87 /* localizable.strings in Resources */,
+				0A20BE041D144E8900799A87 /* Assets.xcassets in Resources */,
+				0A20BDCF1D144A2200799A87 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A20BDD81D144A2200799A87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A20BDE31D144A2200799A87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A20BDF71D144B6200799A87 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# xcode-build-bump.sh\n# @desc Auto-increment the build number every time the project is run.\n# @usage\n# 1. Select: your Target in Xcode\n# 2. Select: Build Phases Tab\n# 3. Select: Add Build Phase -> Add Run Script\n# 4. Paste code below in to new \"Run Script\" section\n# 5. Drag the \"Run Script\" below \"Link Binaries With Libraries\"\n# 6. Insure that your starting build number is set to a whole integer and not a float (e.g. 1, not 1.0)\n\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
+		};
+		0A20BDF81D144B8400799A87 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# xcode-version-bump.sh\n# @desc Auto-increment the version number (only) when a project is archived for export.\n# @usage\n# 1. Select: your Target in Xcode\n# 2. Select: Build Phases Tab\n# 3. Select: Add Build Phase -> Add Run Script\n# 4. Paste code below in to new \"Run Script\" section\n# 5. Check the checkbox \"Run script only when installing\"\n# 6. Drag the \"Run Script\" below \"Link Binaries With Libraries\"\n# 7. Insure your starting version number is in SemVer format (e.g. 1.0.0)\n\n# This splits a two-decimal version string, such as \"0.45.123\", allowing us to increment the third position.\nVERSIONNUM=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\necho \"VERSIONNUM = $VERSIONNUM\" # 1.0.0\nNEWSUBVERSION=`echo $VERSIONNUM | awk -F \".\" '{print $3}'`\necho \"1. NEWSUBVERSION = $NEWSUBVERSION\" # 0\nNEWSUBVERSION=$(($NEWSUBVERSION + 1))\necho \"2. NEWSUBVERSION = $NEWSUBVERSION\" # 1\nNEWVERSIONSTRING=`echo $VERSIONNUM | awk -F \".\" '{print $1 \".\" $2 \".'$NEWSUBVERSION'\" }'`\necho \"NEWVERSIONSTRING = $NEWVERSIONSTRING\" # 1.0.1\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $NEWVERSIONSTRING\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
+		};
+		2415DA5E0D48FAE7E8EB0BFA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		68170220C3E6AA2AB575D7C1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-handwrito/Pods-handwrito-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C69C0E6C0F33B278F26EDA96 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-handwrito/Pods-handwrito-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A20BDC21D144A2200799A87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A20BE0D1D1456F500799A87 /* HWHandwriteTextAPIManager.swift in Sources */,
+				0A20BE091D144ED900799A87 /* AppDelegate.swift in Sources */,
+				0A20BE0F1D145D0D00799A87 /* HWRender.swift in Sources */,
+				0A20BE011D144E5800799A87 /* HWHandwriteTextViewController.swift in Sources */,
+				0A8E3E3D1D15A9E5001F41BF /* HWValidatableUITextView.swift in Sources */,
+				0A20BE0B1D144F0600799A87 /* HWConstants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A20BDD61D144A2200799A87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A20BDDF1D144A2200799A87 /* handwritoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A20BDE11D144A2200799A87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A20BDEA1D144A2200799A87 /* handwritoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0A20BDDC1D144A2200799A87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A20BDC51D144A2200799A87 /* handwrito */;
+			targetProxy = 0A20BDDB1D144A2200799A87 /* PBXContainerItemProxy */;
+		};
+		0A20BDE71D144A2200799A87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A20BDC51D144A2200799A87 /* handwrito */;
+			targetProxy = 0A20BDE61D144A2200799A87 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0A20BDCD1D144A2200799A87 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A20BDCE1D144A2200799A87 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0A20BDD21D144A2200799A87 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A20BDD31D144A2200799A87 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0A20BDEC1D144A2200799A87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0A20BDED1D144A2200799A87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A20BDEF1D144A2200799A87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB86DDB8D3D0029B7B38A2B9 /* Pods-handwrito.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = handwrito/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kblny.handwrito;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0A20BDF01D144A2200799A87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E6205D6192EDB966C8F9018 /* Pods-handwrito.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = handwrito/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kblny.handwrito;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0A20BDF21D144A2200799A87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = handwritoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kblny.handwritoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/handwrito.app/handwrito";
+			};
+			name = Debug;
+		};
+		0A20BDF31D144A2200799A87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = handwritoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kblny.handwritoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/handwrito.app/handwrito";
+			};
+			name = Release;
+		};
+		0A20BDF51D144A2200799A87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = handwritoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kblny.handwritoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = handwrito;
+			};
+			name = Debug;
+		};
+		0A20BDF61D144A2200799A87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = handwritoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kblny.handwritoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = handwrito;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A20BDC11D144A2200799A87 /* Build configuration list for PBXProject "handwrito" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A20BDEC1D144A2200799A87 /* Debug */,
+				0A20BDED1D144A2200799A87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A20BDEE1D144A2200799A87 /* Build configuration list for PBXNativeTarget "handwrito" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A20BDEF1D144A2200799A87 /* Debug */,
+				0A20BDF01D144A2200799A87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A20BDF11D144A2200799A87 /* Build configuration list for PBXNativeTarget "handwritoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A20BDF21D144A2200799A87 /* Debug */,
+				0A20BDF31D144A2200799A87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A20BDF41D144A2200799A87 /* Build configuration list for PBXNativeTarget "handwritoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A20BDF51D144A2200799A87 /* Debug */,
+				0A20BDF61D144A2200799A87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A20BDBE1D144A2200799A87 /* Project object */;
+}
