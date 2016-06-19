@@ -6,6 +6,7 @@ A sample iOS Swift project manipulating the Handwriting.io API
 - [Installation](#installation)
 - [Achitecture](#achitecture)
 - [Project Structure](#project-structure)
+- [Versioning](#versioning)
 - [Dependencies](#dependencies)
 - [TODOS](#todos)
 - [License](#license)
@@ -49,6 +50,11 @@ This app is based on a MVC pattern. The project app folder is organized as follo
 |- Views (contains all storyboards)
 ```
 
+## Versioning
+The version of the project follow the semver system major.minor.maintenance.build
+The `maintenance` part is auto-incremented on "Archive".
+The `build` part is auto-incremented on "Build".
+
 ## Dependencies
 Dependencies are managed by CocoaPods. This project uses the following:
 - [Alamofire](https://github.com/Alamofire/Alamofire) HTTP Networking, GET and POST operations
@@ -64,8 +70,8 @@ Dependencies are managed by CocoaPods. This project uses the following:
 - [ ] Launch Screen
 - [ ] Separate Component for text input and toolbar
 - [ ] Select render between PNG image or PDF
-- [ ] Support Orientation
-- [ ] Support keyboard dismiss
+- [ ] Support Orientation
+- [ ] Support keyboard dismiss
 - [ ] UI and Unit Tests
 - [ ] Add CI
 - [ ] Add Code Quality badge
