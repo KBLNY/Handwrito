@@ -18,6 +18,8 @@
 		0A20BE0B1D144F0600799A87 /* HWConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A20BE0A1D144F0600799A87 /* HWConstants.swift */; };
 		0A20BE0D1D1456F500799A87 /* HWHandwriteTextAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A20BE0C1D1456F500799A87 /* HWHandwriteTextAPIManager.swift */; };
 		0A20BE0F1D145D0D00799A87 /* HWRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A20BE0E1D145D0D00799A87 /* HWRender.swift */; };
+		0A7EC6041D19C7F700E2FC2C /* HWFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EC6031D19C7F700E2FC2C /* HWFont.swift */; };
+		0A7EC6061D19C8CF00E2FC2C /* HWFontAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EC6051D19C8CF00E2FC2C /* HWFontAPIManager.swift */; };
 		0A8E3E3D1D15A9E5001F41BF /* HWValidatableUITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E3E3C1D15A9E5001F41BF /* HWValidatableUITextView.swift */; };
 		303B7C87477856976435266B /* Pods_handwrito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6249E9564BB313703D5C5FDF /* Pods_handwrito.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,8 @@
 		0A20BE0A1D144F0600799A87 /* HWConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWConstants.swift; sourceTree = "<group>"; };
 		0A20BE0C1D1456F500799A87 /* HWHandwriteTextAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWHandwriteTextAPIManager.swift; sourceTree = "<group>"; };
 		0A20BE0E1D145D0D00799A87 /* HWRender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWRender.swift; sourceTree = "<group>"; };
+		0A7EC6031D19C7F700E2FC2C /* HWFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWFont.swift; sourceTree = "<group>"; };
+		0A7EC6051D19C8CF00E2FC2C /* HWFontAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWFontAPIManager.swift; sourceTree = "<group>"; };
 		0A8E3E3C1D15A9E5001F41BF /* HWValidatableUITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HWValidatableUITextView.swift; path = handwrito/Utils/HWValidatableUITextView.swift; sourceTree = SOURCE_ROOT; };
 		5E6205D6192EDB966C8F9018 /* Pods-handwrito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handwrito.release.xcconfig"; path = "Pods/Target Support Files/Pods-handwrito/Pods-handwrito.release.xcconfig"; sourceTree = "<group>"; };
 		6249E9564BB313703D5C5FDF /* Pods_handwrito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_handwrito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				0A20BE0C1D1456F500799A87 /* HWHandwriteTextAPIManager.swift */,
+				0A7EC6051D19C8CF00E2FC2C /* HWFontAPIManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				0A20BE0E1D145D0D00799A87 /* HWRender.swift */,
+				0A7EC6031D19C7F700E2FC2C /* HWFont.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -451,6 +457,8 @@
 				0A20BE0D1D1456F500799A87 /* HWHandwriteTextAPIManager.swift in Sources */,
 				0A20BE091D144ED900799A87 /* AppDelegate.swift in Sources */,
 				0A20BE0F1D145D0D00799A87 /* HWRender.swift in Sources */,
+				0A7EC6041D19C7F700E2FC2C /* HWFont.swift in Sources */,
+				0A7EC6061D19C8CF00E2FC2C /* HWFontAPIManager.swift in Sources */,
 				0A20BE011D144E5800799A87 /* HWHandwriteTextViewController.swift in Sources */,
 				0A8E3E3D1D15A9E5001F41BF /* HWValidatableUITextView.swift in Sources */,
 				0A20BE0B1D144F0600799A87 /* HWConstants.swift in Sources */,

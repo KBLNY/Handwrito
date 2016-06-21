@@ -1,12 +1,18 @@
 PODS:
   - Alamofire (3.4.1)
   - Dodo (2.2.1)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
   - SwiftValidator (3.0.1)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
   - Dodo (~> 2.2)
+  - SDWebImage
   - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, tag `4.0.0`)
+  - SwiftyJSON
 
 EXTERNAL SOURCES:
   SwiftValidator:
@@ -21,6 +27,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   Dodo: 9c9a368ec6c869928429c691eecc926889882a2d
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   SwiftValidator: 461a2c00173f001287a8fa1f12704b87ec8a6bc4
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

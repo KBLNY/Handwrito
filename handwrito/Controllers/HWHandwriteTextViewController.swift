@@ -9,14 +9,18 @@
 import UIKit
 import Dodo // Message Bar Alert
 import SwiftValidator // Validation System
+import SDWebImage // Image Caching
 
 
 /// A ViewController responsible for handling the tranformation of an input text into a handwrited text
-class HWHandwriteTextViewController: UIViewController, ValidationDelegate {
+class HWHandwriteTextViewController: UIViewController, ValidationDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
  
 
     /// Validator to validate user inputs
     private let validator = Validator()
+    private var fontDataSource = Array<HWFont>()
+    private var fontImageDataSource = Array<UIImage>()
+    private var selectedFontId: String = ""
     
     
     // MARK: UI Objects
@@ -33,12 +37,17 @@ class HWHandwriteTextViewController: UIViewController, ValidationDelegate {
     /// A loader notifying the process is running
     @IBOutlet weak var imageLoader: UIActivityIndicatorView!
 
+    /// A picker to select a font for the render of the text
+    @IBOutlet weak var pickerFont: UIPickerView!
     
     
     // MARK: View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Fetch the most rated font (simulated, take the first 20)
+        self.initPickerFont()
         
         // Init the message bar for presenting error messages
         self.initMessageBarAlert()
@@ -70,6 +79,46 @@ class HWHandwriteTextViewController: UIViewController, ValidationDelegate {
     
     
     
+    // MARK: UIPickerViewDataSource & UIPickerViewDelegate
+    
+    // Used for simple text in picker
+//    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        let _font = self.fontDataSource[row]
+//        return _font.title
+//    }
+    
+    
+    // Used to display the font name style with its own font
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+        // get the 
+        let _fontImage = self.fontImageDataSource[row]
+        
+        let fontImageView = UIImageView(image: _fontImage)
+        
+        return fontImageView
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.fontImageDataSource.count
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let _font = self.fontDataSource[row]
+        
+        // When a font is selected, keep its id as selected
+        self.selectedFontId = _font.id
+    }
+    
+    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 30.0
+    }
+    
+    
+    
     // MARK: ValidationDelegate
     
     /// Trigger if the ValidationDelegate's `validation` succeed.
@@ -79,7 +128,7 @@ class HWHandwriteTextViewController: UIViewController, ValidationDelegate {
         self.imageLoader.startAnimating()
         
         // All fields are validated, call the API to transform the user's input text into a handwrited text
-        HWHandwriteTextAPIManager.sharedInstance.getRenderText(self.textToHandwrite.text!) { (renderObject: HWRender?, error: HWHandwriteError?) in
+        HWHandwriteTextAPIManager.sharedInstance.getRenderText(self.textToHandwrite.text!, fontId: self.selectedFontId, color: "#FFFFFF", fontSize: "24px", height: "500px") { (renderObject: HWRender?, error: HWHandwriteError?) in
             // In any case, stop the loader
             self.imageLoader.stopAnimating()
             
@@ -164,10 +213,71 @@ class HWHandwriteTextViewController: UIViewController, ValidationDelegate {
             RequiredRule(message: "Please type a text to transform"),
             CharacterSetRule(characterSet: charset, message: "Please type only alphanumeric characters"),
             MaxLengthRule(length: 9000, message: "The text must be at most 9000 characters long"),
-            MinLengthRule(length: 10, message: "The text must be at least 10 characters long")
+            MinLengthRule(length: 1, message: "The text must be at least 1 character long")
             ]
         )
     }
+    
+    
+    private func initPickerFont() {
+        self.pickerFont.delegate = self
+        self.pickerFont.dataSource = self
+        
+        // All fields are validated, call the API to transform the user's input text into a handwrited text
+        HWFontAPIManager.sharedInstance.getHandwritings(20, offset: 0) { (fontList: Array<HWFont>?, error: HWFontError?) in
+            guard error == nil else {
+                // An error occured display an error message
+                self.handleErrorFont(error!)
+                return
+            }
+            
+            guard fontList != nil else {
+                // If the render object is nil, An error occured display an error message
+                self.showErrorAlert("An error occured")
+                return
+            }
+            
+            // Set the Data source
+            self.fontDataSource = fontList!
+            
+            // Set the selected font as the first one
+            if let firstFont = fontList?.first {
+                self.selectedFontId = firstFont.id
+            }
+            
+            for _font in fontList! {
+                self.getFontNameStyleByItsOwnFont(_font)
+            }
+        }
+
+    }
+    
+    
+    private func getFontNameStyleByItsOwnFont(font: HWFont) {
+        // All fields are validated, call the API to transform the user's input text into a handwrited text
+        HWHandwriteTextAPIManager.sharedInstance.getRenderText(font.title, fontId: font.id, color: "#000000", fontSize: "20px", height: "30px", width: "\(self.pickerFont.frame.width)px") { (renderObject: HWRender?, error: HWHandwriteError?) in
+            guard error == nil else {
+                // An error occured display an error message
+                self.handleError(error!)
+                return
+            }
+            
+            guard renderObject != nil else {
+                // If the render object is nil, An error occured display an error message
+                self.showErrorAlert("An error occured")
+                return
+            }
+            
+            // Display the generated result image
+            self.fontImageDataSource.append(renderObject!.handwritedTextImage)
+            
+            // Refresh the font picker
+            self.pickerFont.reloadAllComponents()
+        }
+        
+    }
+    
+
     
     
     /// Display an error message according to its type
@@ -180,6 +290,24 @@ class HWHandwriteTextViewController: UIViewController, ValidationDelegate {
         case .HWUnsupportedCharacterError:
             errorMessage = "You entered an unsupported character, please try again"
             break
+        case .RateLimitExceededError:
+            errorMessage = "Rate Limit Exceeded"
+            break
+        default:
+            errorMessage = "An error occured"
+        }
+        
+        self.showErrorAlert(errorMessage)
+    }
+    
+    
+    /// Display an error message according to its type
+    /// - parameters:
+    ///   - error: The error to handle
+    private func handleErrorFont(error: HWFontError) {
+        var errorMessage = "An error occured"
+        
+        switch error {
         case .RateLimitExceededError:
             errorMessage = "Rate Limit Exceeded"
             break

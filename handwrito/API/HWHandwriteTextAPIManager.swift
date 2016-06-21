@@ -42,18 +42,18 @@ class HWHandwriteTextAPIManager: NSObject {
     /// - parameters:
     ///   - text: the text to transform into a handwrited text image.
     ///   - onCompletion: a completion callback to handle the success or error result
-    func getRenderText(text: String, onCompletion: ServiceResponseRender) {
-        // TODO add font type, font size, and color as parameters
-        
+    func getRenderText(text: String, fontId: String, color: String, fontSize: String, height: String, width: String = "auto", onCompletion: ServiceResponseRender) {
         // Define the URL endpoint
         let requestUrl = HWConfig.HANDWRITING_API_URL + RENDER_PNG_ENDPOINT
         
         // Build the array of parameters
         let params = [
-            "handwriting_id" : "2D5QW0F80001", //molly
+            "handwriting_id" : fontId,
             "text": text,
-            "handwriting_size": "24px", // 0px - 9000px
-            "handwriting_color": "#FFFFFF",
+            "handwriting_size": fontSize, // 0px - 9000px
+            "handwriting_color": color,
+            "height": height,
+            "width": width,
         ]
         
         // Automatically validates status code within 200...299 range, and that the Content-Type header of the response matches the Accept header of the request

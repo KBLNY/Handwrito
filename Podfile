@@ -7,11 +7,17 @@ target 'handwrito' do
     # REST Calls
     pod 'Alamofire', '~> 3.4'
     
+    # JSON
+    pod 'SwiftyJSON'
+    
     # Form Validation
     pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :tag => '4.0.0'
 
     # Message Bar
     pod 'Dodo', '~> 2.2'
+    
+    # Image caching
+    pod 'SDWebImage'
 end
 
 target 'handwritoTests' do

@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="78"/>
                                 <color key="backgroundColor" red="0.36470588240000001" green="0.61176470589999998" blue="0.82352941180000006" alpha="0.79513264388489213" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="78" id="g7l-f0-7oB"/>
+                                    <constraint firstAttribute="height" constant="78" id="AWo-Ds-mx9"/>
                                 </constraints>
                                 <string key="text">Handwrito
 Demo App using Handwriting.io</string>
@@ -37,18 +37,12 @@ Demo App using Handwriting.io</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Handwrite any text:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evc-8H-kEg" userLabel="Guidelines">
-                                <rect key="frame" x="20" y="86" width="560" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="TZX-nn-z7V"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="Type a text to transform..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PpR-XJ-KNr">
-                                <rect key="frame" x="20" y="115" width="560" height="116"/>
+                                <rect key="frame" x="20" y="132" width="560" height="99"/>
                                 <color key="backgroundColor" red="0.36470588240000001" green="0.61176470589999998" blue="0.82352941180000006" alpha="0.41189860611510792" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="a05-Vu-4tD"/>
+                                </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
@@ -57,7 +51,7 @@ Demo App using Handwriting.io</string>
                                 <rect key="frame" x="220" y="239" width="160" height="30"/>
                                 <color key="backgroundColor" red="0.36470588240000001" green="0.61176470589999998" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="VgW-bp-JXi"/>
+                                    <constraint firstAttribute="width" constant="160" id="fJn-Il-DlP"/>
                                 </constraints>
                                 <state key="normal" title="Handwrite it!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,41 +66,73 @@ Demo App using Handwriting.io</string>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="PgN-LX-fIN">
                                 <rect key="frame" x="282" y="410" width="37" height="37"/>
                             </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mbf-Pp-Otm" userLabel="Toolbar">
+                                <rect key="frame" x="20" y="86" width="560" height="38"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Handwrite any text:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evc-8H-kEg" userLabel="Guidelines">
+                                        <rect key="frame" x="8" y="8" width="171" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="171" id="IaT-Wu-8nr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="wea-Dk-J4E">
+                                        <rect key="frame" x="385" y="8" width="167" height="22"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="167" id="7ia-8o-Zgw"/>
+                                        </constraints>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="evc-8H-kEg" firstAttribute="leading" secondItem="Mbf-Pp-Otm" secondAttribute="leadingMargin" id="9GC-qY-Kac"/>
+                                    <constraint firstItem="evc-8H-kEg" firstAttribute="top" secondItem="Mbf-Pp-Otm" secondAttribute="topMargin" id="LCy-mI-Bne"/>
+                                    <constraint firstItem="evc-8H-kEg" firstAttribute="centerY" secondItem="wea-Dk-J4E" secondAttribute="centerY" id="Los-Q3-mqp"/>
+                                    <constraint firstItem="wea-Dk-J4E" firstAttribute="bottom" secondItem="Mbf-Pp-Otm" secondAttribute="bottomMargin" id="MaZ-Xk-Fv9"/>
+                                    <constraint firstItem="evc-8H-kEg" firstAttribute="top" secondItem="wea-Dk-J4E" secondAttribute="top" id="PDF-YT-7IZ"/>
+                                    <constraint firstItem="wea-Dk-J4E" firstAttribute="trailing" secondItem="Mbf-Pp-Otm" secondAttribute="trailingMargin" id="m8D-Oc-5Xg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tWK-b9-RN9" firstAttribute="trailing" secondItem="Mpo-tO-nm3" secondAttribute="trailing" id="24W-4F-2cx"/>
-                            <constraint firstItem="Mpo-tO-nm3" firstAttribute="leading" secondItem="tWK-b9-RN9" secondAttribute="leading" id="3UU-Mb-tCd"/>
-                            <constraint firstItem="evc-8H-kEg" firstAttribute="leading" secondItem="PpR-XJ-KNr" secondAttribute="leading" id="4gb-6z-SGV"/>
-                            <constraint firstItem="PpR-XJ-KNr" firstAttribute="top" secondItem="evc-8H-kEg" secondAttribute="bottom" constant="8" symbolic="YES" id="5rv-0l-dF5"/>
-                            <constraint firstItem="hSv-Bx-0Yq" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="7on-Am-53R"/>
-                            <constraint firstItem="ECn-lA-Rqu" firstAttribute="top" secondItem="fFc-kH-o1y" secondAttribute="bottom" constant="8" symbolic="YES" id="BgO-Dd-F3y"/>
-                            <constraint firstItem="hSv-Bx-0Yq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CL9-fl-3Ad"/>
-                            <constraint firstItem="evc-8H-kEg" firstAttribute="top" secondItem="Mpo-tO-nm3" secondAttribute="bottom" constant="8" symbolic="YES" id="GRr-Eq-8Ge"/>
-                            <constraint firstItem="Mpo-tO-nm3" firstAttribute="top" secondItem="hSv-Bx-0Yq" secondAttribute="top" id="Mo5-9T-08N"/>
-                            <constraint firstItem="hSv-Bx-0Yq" firstAttribute="trailing" secondItem="Mpo-tO-nm3" secondAttribute="trailing" id="QDx-8Z-fxd"/>
-                            <constraint firstItem="Mpo-tO-nm3" firstAttribute="top" secondItem="tWK-b9-RN9" secondAttribute="top" id="Rlf-UL-4qx"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PgN-LX-fIN" secondAttribute="bottom" constant="153" id="SKQ-hb-d1O"/>
-                            <constraint firstItem="PpR-XJ-KNr" firstAttribute="trailing" secondItem="ECn-lA-Rqu" secondAttribute="trailing" id="US3-cr-HcJ"/>
-                            <constraint firstItem="fFc-kH-o1y" firstAttribute="centerX" secondItem="PgN-LX-fIN" secondAttribute="centerX" id="Uyh-Hm-2In"/>
-                            <constraint firstAttribute="trailing" secondItem="Mpo-tO-nm3" secondAttribute="trailing" id="Zza-fe-kt1"/>
-                            <constraint firstItem="fFc-kH-o1y" firstAttribute="top" secondItem="PpR-XJ-KNr" secondAttribute="bottom" constant="8" symbolic="YES" id="am3-xm-2wL"/>
-                            <constraint firstItem="tWK-b9-RN9" firstAttribute="leading" secondItem="hSv-Bx-0Yq" secondAttribute="leading" id="bf4-8e-cEN"/>
-                            <constraint firstAttribute="bottom" secondItem="ECn-lA-Rqu" secondAttribute="bottom" constant="20" symbolic="YES" id="d5c-eX-JDi"/>
-                            <constraint firstItem="hSv-Bx-0Yq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gYv-8t-joQ"/>
-                            <constraint firstItem="evc-8H-kEg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="juQ-3a-NNY"/>
-                            <constraint firstItem="evc-8H-kEg" firstAttribute="trailing" secondItem="PpR-XJ-KNr" secondAttribute="trailing" id="o9V-He-z9o"/>
-                            <constraint firstItem="PpR-XJ-KNr" firstAttribute="centerX" secondItem="fFc-kH-o1y" secondAttribute="centerX" id="oHd-dV-T0e"/>
-                            <constraint firstItem="tWK-b9-RN9" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="t9X-Lg-lyO"/>
-                            <constraint firstItem="PpR-XJ-KNr" firstAttribute="leading" secondItem="ECn-lA-Rqu" secondAttribute="leading" id="xmT-SC-Djq"/>
-                            <constraint firstItem="ECn-lA-Rqu" firstAttribute="centerY" secondItem="PgN-LX-fIN" secondAttribute="centerY" id="yKb-ng-gpl"/>
-                            <constraint firstItem="Mpo-tO-nm3" firstAttribute="centerX" secondItem="evc-8H-kEg" secondAttribute="centerX" id="yjf-EP-E14"/>
+                            <constraint firstItem="Mpo-tO-nm3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4eM-lv-xaP"/>
+                            <constraint firstItem="fFc-kH-o1y" firstAttribute="centerX" secondItem="PgN-LX-fIN" secondAttribute="centerX" id="6fH-PF-O1P"/>
+                            <constraint firstItem="Mbf-Pp-Otm" firstAttribute="trailing" secondItem="PpR-XJ-KNr" secondAttribute="trailing" id="8WD-Xx-86a"/>
+                            <constraint firstItem="Mbf-Pp-Otm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9L6-vp-dQD"/>
+                            <constraint firstItem="PpR-XJ-KNr" firstAttribute="centerX" secondItem="fFc-kH-o1y" secondAttribute="centerX" id="AzE-aJ-5q7"/>
+                            <constraint firstItem="fFc-kH-o1y" firstAttribute="top" secondItem="PpR-XJ-KNr" secondAttribute="bottom" constant="8" symbolic="YES" id="BCb-jE-Dfa"/>
+                            <constraint firstItem="PpR-XJ-KNr" firstAttribute="top" secondItem="Mbf-Pp-Otm" secondAttribute="bottom" constant="8" symbolic="YES" id="CIa-mg-1DH"/>
+                            <constraint firstItem="PpR-XJ-KNr" firstAttribute="trailing" secondItem="ECn-lA-Rqu" secondAttribute="trailing" id="Gnq-nx-Lkl"/>
+                            <constraint firstAttribute="bottom" secondItem="ECn-lA-Rqu" secondAttribute="bottom" constant="20" symbolic="YES" id="HZu-rO-2dD"/>
+                            <constraint firstItem="Mpo-tO-nm3" firstAttribute="leading" secondItem="tWK-b9-RN9" secondAttribute="leading" id="Lp7-t2-PxR"/>
+                            <constraint firstItem="hSv-Bx-0Yq" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="N1u-vL-NuE"/>
+                            <constraint firstItem="hSv-Bx-0Yq" firstAttribute="top" secondItem="Mpo-tO-nm3" secondAttribute="top" id="PPp-MQ-lrG"/>
+                            <constraint firstItem="Mbf-Pp-Otm" firstAttribute="top" secondItem="Mpo-tO-nm3" secondAttribute="bottom" constant="8" symbolic="YES" id="T2z-4i-GLU"/>
+                            <constraint firstItem="hSv-Bx-0Yq" firstAttribute="trailing" secondItem="Mpo-tO-nm3" secondAttribute="trailing" id="a5Q-51-rls"/>
+                            <constraint firstItem="tWK-b9-RN9" firstAttribute="leading" secondItem="hSv-Bx-0Yq" secondAttribute="leading" id="aDh-gz-itt"/>
+                            <constraint firstItem="tWK-b9-RN9" firstAttribute="trailing" secondItem="hSv-Bx-0Yq" secondAttribute="trailing" id="dY7-4h-LAT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PgN-LX-fIN" secondAttribute="bottom" constant="153" id="eIT-gR-6eQ"/>
+                            <constraint firstItem="Mpo-tO-nm3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jju-HS-UT8"/>
+                            <constraint firstAttribute="trailing" secondItem="tWK-b9-RN9" secondAttribute="trailing" id="lfJ-K4-2Yx"/>
+                            <constraint firstItem="ECn-lA-Rqu" firstAttribute="centerY" secondItem="PgN-LX-fIN" secondAttribute="centerY" id="ngz-hy-T4p"/>
+                            <constraint firstItem="Mpo-tO-nm3" firstAttribute="centerX" secondItem="Mbf-Pp-Otm" secondAttribute="centerX" id="nnl-pS-Tur"/>
+                            <constraint firstItem="ECn-lA-Rqu" firstAttribute="top" secondItem="fFc-kH-o1y" secondAttribute="bottom" constant="8" symbolic="YES" id="nrP-QX-VUs"/>
+                            <constraint firstItem="tWK-b9-RN9" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="oJb-TH-S1p"/>
+                            <constraint firstItem="Mpo-tO-nm3" firstAttribute="top" secondItem="tWK-b9-RN9" secondAttribute="top" id="oXf-oG-56F"/>
+                            <constraint firstItem="PpR-XJ-KNr" firstAttribute="leading" secondItem="ECn-lA-Rqu" secondAttribute="leading" id="oeM-g0-coG"/>
+                            <constraint firstItem="Mbf-Pp-Otm" firstAttribute="leading" secondItem="PpR-XJ-KNr" secondAttribute="leading" id="th5-CK-Gfn"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="handwriteProcessingButton" destination="fFc-kH-o1y" id="tlV-Ae-dIX"/>
                         <outlet property="handwritedTextImage" destination="ECn-lA-Rqu" id="gBr-wm-dmD"/>
                         <outlet property="imageLoader" destination="PgN-LX-fIN" id="sMT-7Y-L3L"/>
+                        <outlet property="pickerFont" destination="wea-Dk-J4E" id="j32-PZ-xLw"/>
                         <outlet property="textToHandwrite" destination="PpR-XJ-KNr" id="2nK-KY-vp2"/>
                     </connections>
                 </viewController>
